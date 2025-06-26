@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio QA JR - Rogério</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background-color: #0e1117;
+      color: #e4e6eb;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #161b22;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #30363d;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #58a6ff;
+    }
+    header p {
+      margin-top: 0.5rem;
+      color: #8b949e;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #58a6ff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+      background-color: #161b22;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+    ul, li {
+      line-height: 1.8;
+    }
+    .btn {
+      background-color: #238636;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #2ea043;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: none;
+      background-color: #0d1117;
+      color: #eee;
+    }
+    button[type="submit"] {
+      background-color: #238636;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #2ea043;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      nav a { display: block; margin: 0.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio QA JR - Rogério</h1>
+    <p>Testes Manuais | Automação | API | CI/CD</p>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#estrutura">Projeto</a>
+      <a href="#execucao">Execução</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>👨‍💻 Sobre Mim</h2>
+      <p>Sou Analista de Testes em formação, com foco em garantir a qualidade de software por meio de testes manuais, automação de testes, validação de APIs e integração contínua. Este portfólio demonstra minha capacidade técnica em diferentes áreas do QA.</p>
+    </section>
+
+    <section id="estrutura">
+      <h2>📁 Estrutura do Projeto</h2>
+      <ul>
+        <li><strong>Test Cases:</strong> Casos de teste escritos em Markdown</li>
+        <li><strong>Bug Reports:</strong> Modelos reais de relatórios de erro</li>
+        <li><strong>Automação:</strong> Scripts com Selenium (Python) e Cypress (JS)</li>
+        <li><strong>Testes de API:</strong> Prontos para Postman/Newman</li>
+        <li><strong>CI/CD:</strong> Jenkinsfile para pipeline automatizado</li>
+      </ul>
+    </section>
+
+    <section id="execucao">
+      <h2>🚀 Como Executar</h2>
+      <ul>
+        <li><strong>Selenium:</strong> <code>pip install selenium && python test_login.py</code></li>
+        <li><strong>Cypress:</strong> <code>npm install cypress && npx cypress open</code></li>
+        <li><strong>API Testing:</strong> <code>newman run collection.json</code></li>
+      </ul>
+    </section>
+
+    <section id="downloads">
+      <h2>⬇️ Downloads</h2>
+      <a href="Estudo_Completo_QA_JR.pdf" class="btn" download>📘 Baixar PDF Completo</a>
+      <a href="portfolio-qa-jr.zip" class="btn" download>📦 Baixar Portfólio ZIP</a>
+    </section>
+
+    <section id="contato">
+      <h2>📬 Contato</h2>
+      <p>Você pode me escrever diretamente pelo formulário abaixo ou por e-mail: <strong>rogervsjr@gmail.com</strong></p>
+      <form action="https://formsubmit.co/rogervsjr@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    Desenvolvido por Rogério © 2025 • GitHub: rogeriovsjr
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
