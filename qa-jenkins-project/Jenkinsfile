@@ -1,0 +1,31 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonar Repositório') {
+            steps {
+                git 'https://github.com/seu-usuario/seu-repositorio.git'
+            }
+        }
+
+        stage('Executar Testes com Newman') {
+            steps {
+                sh 'newman run collection.postman.json -r cli,html --reporter-html-export resultado.html'
+            }
+        }
+
+        stage('Publicar Relatório') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: '.',
+                    reportFiles: 'resultado.html',
+                    reportName: 'Relatório de Testes'
+                ])
+            }
+        }
+    }
+}

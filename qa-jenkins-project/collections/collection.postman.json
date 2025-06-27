@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "API de Produtos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Produtos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/produtos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "produtos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
